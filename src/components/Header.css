@@ -1,0 +1,26 @@
+nav {
+    color: #fff;
+    text-align: center;
+    background-color: #333;
+    padding: 5px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 5rem;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}

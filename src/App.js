@@ -1,38 +1,34 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Experience from './components/Experience';
+import Contact from './components/Contact';
+import Header from './components/Header';
+import './App.css';
+import html2pdf from 'html2pdf.js';
 
 function App() {
+  const exportToPDF = () => {
+    const element = document.getElementById('pdf-container'); 
+    html2pdf().from(element).save();
+  };
+
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/experience">Experiences</Link>
-            </li>
-          </ul>
-        </nav>
+        <Header />
       </div>
-      <Routes>
-        <Route path="/about" element={<About/>}>
-          <About />
-        </Route>
-        <Route path="/" element={<Home/>}>
-          <Home />
-        </Route>
-        <Route path="/experience" element={<Experience/>}>
-          <Experience />
-        </Route>
-      </Routes>
+      <div className="container" id="pdf-container">
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+      <br/>
+      <button onClick={exportToPDF}>Export to PDF</button>
     </Router>
   );
 }

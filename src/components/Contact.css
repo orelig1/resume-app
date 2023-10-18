@@ -1,0 +1,22 @@
+/* Contact.css */
+.form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+    margin-bottom: 10px;
+  }
+  
+  label {
+    width: 120px;
+    color: #fff;
+  }
+  
+  input,
+  textarea {
+    flex: 0.5;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  

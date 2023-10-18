@@ -3,16 +3,18 @@ import React from 'react';
 function Experience() {
   return (
     <div>
-      <h1>Experience</h1>
+      <h1>Experiences</h1>
       <div className="experience-item">
-        <h2>Job Title - Company Name</h2>
-        <p>Start Date - End Date</p>
-        <p>Description of your responsibilities and achievements in this role.</p>
+        <h2>Programmeuse Junior - LcgSolution</h2>
+        <p>1 juin 2023 - Aujourd'hui</p>
+        <p>Debbuger en Vuex</p>
+        <p>Transférer le code Vuex en React</p>
       </div>
+      <hr/>
       <div className="experience-item">
-        <h2>Another Job Title - Another Company</h2>
-        <p>Start Date - End Date</p>
-        <p>More details about your responsibilities and accomplishments in this position.</p>
+        <h2>Associée aux ventes - Tony Pappas</h2>
+        <p>1 juin 2020 - 15 août 2022</p>
+        <p>Conseillère en vente</p>
       </div>
       {/* Add more experience items as needed */}
     </div>
